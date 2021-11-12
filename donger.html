@@ -21,7 +21,7 @@
         <a href="https://app.tinyman.org/#/swap?asset_in=0&asset_out=408200080" target="_blank" class="w3-bar-item w3-button w3-right">Tinyman</a>
         <a href="https://twitter.com/dongraiser_ALGO" target="_blank" class="w3-bar-item w3-button w3-right">Twitter</a>
         <a href=" " class="w3-bar-item w3-button w3-right">Tinychart</a>
-        <a href="#contact" class="w3-bar-item w3-button w3-right">Contact</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-right" onclick="showContact()">Contact</a>
         <button class="w3-button">Connect Wallet</button>
       </div>
     </div>
@@ -39,7 +39,7 @@
   </div>
 
   <!-- contact container dongraiseralgo@protonmail.com -->
-  <div class="w3-container" id="contact">
+  <div class="w3-container" id="contact" style="display: none;">
     <p class="w3-center w3-text-white w3-animate-top">
       dongraiseralgo@protonmail.com
     </p>
@@ -48,7 +48,9 @@
   </body>
 
   <script>
-
+    function showContact() {
+      document.getElementById('contact').style.display = "inline";
+    }
   </script>
 
 </html>
