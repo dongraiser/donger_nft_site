@@ -11,6 +11,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="donger.js"></script>
+  <script type="module" src="myalgo.min.js"></script>
+  <script type="module" src="dongermodule.js"></script>
   <title>ヽ༼ຈل͜ຈ༽ﾉ $DONGER</title>
 
   <body style="background-color:rgb(69, 69, 69)">
@@ -23,7 +26,7 @@
         <a href="https://tinychart.org/asset/408200080" target="_blank" class="w3-bar-item w3-button w3-right w3-mobile">Tinychart</a>
         <a href="https://t.me/Raiseyourdongers" target="_blank" class="w3-bar-item w3-button w3-right w3-mobile">Telegram</a>
         <a href="#contact" class="w3-bar-item w3-button w3-right w3-mobile" onclick="showContact()">Contact</a>
-        <button class="w3-button w3-mobile">Connect Wallet</button>
+        <button id="connect" class="w3-button w3-mobile">Connect Wallet</button>
       </div>
     </div>
 
@@ -53,11 +56,5 @@
   </div>
 
   </body>
-
-  <script>
-    function showContact() {
-      document.getElementById('contact').style.display = "inline";
-    }
-  </script>
 
 </html>
