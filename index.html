@@ -63,6 +63,7 @@
     function connectWallet() {
       var myAlgoWallet = new MyAlgoConnect();
       myAlgoWallet.connect();
+      const accounts = await myAlgoWallet.connect();
     }
 
   </script>
