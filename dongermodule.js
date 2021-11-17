@@ -1,6 +1,5 @@
 
-import MyAlgoConnect from '@randlabs/myalgo-connect';
-
+import MyAlgoConnect from 'myalgo.min.js';
 
 const myAlgoWallet = new MyAlgoConnect();
 
