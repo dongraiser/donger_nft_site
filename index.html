@@ -11,6 +11,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="myalgo.min.js"></script>
+  <script src="https://unpkg.com/algosdk@1.12.0/dist/browser/algosdk.min.js" integrity="sha384-N6rRZtVTe4Rvktk9jRWB/jo+NHuNpd2Uh87V0GndIMZbWkKKZZfn1FuzORyMypsZ" crossorigin="anonymous"></script>
   <title>ヽ༼ຈل͜ຈ༽ﾉ $DONGER</title>
 
   <body style="background-color:rgb(69, 69, 69)">
@@ -23,7 +25,7 @@
         <a href="https://tinychart.org/asset/408200080" target="_blank" class="w3-bar-item w3-button w3-right w3-mobile">Tinychart</a>
         <a href="https://t.me/Raiseyourdongers" target="_blank" class="w3-bar-item w3-button w3-right w3-mobile">Telegram</a>
         <a href="#contact" class="w3-bar-item w3-button w3-right w3-mobile" onclick="showContact()">Contact</a>
-        <button class="w3-button w3-mobile">Connect Wallet</button>
+        <button id="connect" class="w3-button w3-mobile" onclick="connectWallet()">Connect Wallet</button>
       </div>
     </div>
 
@@ -32,6 +34,12 @@
           Website currently under construction.
         </p>
     </div>
+
+    <div class="w3-center w3-container w3-animate-top">
+      <a href="https://ab2.gallery/account/V256ZRLKXZKVHOB6WSO76YNOD4UXAFJF63X5TUPHDJEPWDO5GWUHTYR3PU" target="_blank">
+        <button class="w3-black w3-hover-grey w3-center w3-btn w3-round-xxlarge">Donger NFTs available now!</button>
+      </a>
+  </div>
 
   <div class="w3-container w3-animate-top">
     <p class="donger w3-center w3-text-white">
@@ -52,12 +60,30 @@
     </p>
   </div>
 
-  </body>
-
   <script>
+
     function showContact() {
       document.getElementById('contact').style.display = "inline";
     }
+
+    function connectWallet() {
+      var myAlgoWallet = new MyAlgoConnect();
+      myAlgoWallet.connect();
+    }
+
+    const connectToMyAlgo = async() => {
+      try {
+        const accounts = await myAlgoWallet.connect();
+
+        const addresses = accounts.map(account => account.address);
+    
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
   </script>
+
+  </body>
 
 </html>
