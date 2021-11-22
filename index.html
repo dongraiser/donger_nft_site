@@ -71,19 +71,6 @@
       myAlgoWallet.connect();
     }
 
-    const connectToMyAlgo = async() => {
-      try {
-        const accounts = await myAlgoWallet.connect();
-
-        const addresses = accounts.map(account => account.address);
-
-        console.log(addresses)
-    
-      } catch (err) {
-        console.error(err);
-      }
-    }
-
   </script>
 
   </body>
