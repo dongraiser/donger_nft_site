@@ -71,6 +71,11 @@
       myAlgoWallet.connect();
     }
 
+    async function getAddress() {
+      const accounts = await myAlgoWallet.connect();
+      console.log(accounts);
+    }
+
   </script>
 
   </body>
