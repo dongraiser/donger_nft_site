@@ -71,7 +71,8 @@
     function connectWallet() {
       var myAlgoWallet = new MyAlgoConnect();
       myAlgoWallet.connect().then((accounts) => {
-        })
+        console.log(accounts);
+      })
     }
 
     async function getAddress() {
